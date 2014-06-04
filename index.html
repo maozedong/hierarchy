@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hierarchy</title>
+</head>
+<body>
+<h1>Hierarchy</h1>
+<table id="globalTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Children</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div class="control-panel">
+    <div>
+        <h2>Create</h2>
+        <form class="create-form">
+            <input type="number" class="parent-id" value="0">
+            <input type="text" placeholder="Name" class="name">
+            <textarea class="description"></textarea>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <div>
+        <label for="tableRootId">Parent node</label>
+        <input type="number" id="tableRootId" value="0">
+        <input type="button" value="Clear Storage" id="clearStorage">
+        <input type="button" value="Save Storage" id="saveStorage">
+        <label for="loadStorage">Load Storage</label>
+        <input type="file" value="Load Storage" id="loadStorage">
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="FileSaver.js"></script>
+<script src="hierarchy.js"></script>
+</body>
+</html>
